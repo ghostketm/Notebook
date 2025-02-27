@@ -1,0 +1,18 @@
+{% extends 'notes/base.html' %}
+
+{% block title %}Confirm Delete - Notes App{% endblock %}
+
+{% block content %}
+<div class="delete-container">
+    <h2 class="delete-title">🗑️ Confirm Delete</h2>
+    <p class="delete-warning">Are you sure you want to delete "<strong>{{ object.title }}</strong>"?</p>
+
+    <form method="post">
+        {% csrf_token %}
+        <div class="delete-buttons">
+            <button type="submit" class="delete-btn">✅ Yes, Delete</button>
+            <a href="javascript:history.back()" class="cancel-btn">❌ Cancel</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

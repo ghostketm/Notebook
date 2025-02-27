@@ -1,0 +1,29 @@
+{% extends 'notes/base.html' %}
+{% load static %}
+
+{% block title %}Notes - Notes App{% endblock %}
+
+{% block content %}
+<div class="notes-container">
+    <div class="title-box">
+        <h2 class="notes-title">📝 Notes</h2>
+    </div>
+
+    <div class="notes-grid">
+        {% for note in notes %}
+            <div class="note-card">
+                <a href="{% url 'note_detail' note.id %}">
+                    <div class="note-content">
+                        <h3 class="note-title">{{ note.title }}</h3>
+                        <p class="note-description">Click to view details!</p>
+                    </div>
+                </a>
+            </div>
+        {% empty %}
+            <p class="no-notes">No notes yet. Start by adding one! 📖</p>
+        {% endfor %}
+    </div>
+
+    <a href="{% url 'note_create' topic.id %}" class="add-note-btn">➕ Add Note</a>
+</div>
+{% endblock %}

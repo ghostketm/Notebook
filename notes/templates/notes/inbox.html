@@ -1,0 +1,29 @@
+{% extends 'notes/base.html' %}
+{% load static %}
+
+{% block title %}Inbox - Notes App{% endblock %}
+
+{% block content %}
+<div class="inbox-container">
+    <h2 class="inbox-title">📩 Inbox</h2>
+    <p class="inbox-description">Click on a user to start a chat.</p>
+
+    <div class="inbox-users">
+        {% if users %}
+            {% for user in users %}
+                <a href="{% url 'chat' user.id %}" class="inbox-user-card">
+                    <div class="user-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="user-info">
+                        <span class="user-name">{{ user.username }}</span>
+                        <span class="chat-link">Start Chat</span>
+                    </div>
+                </a>
+            {% endfor %}
+        {% else %}
+            <p class="no-users">No users available for chat.</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

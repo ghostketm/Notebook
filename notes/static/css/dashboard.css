@@ -1,0 +1,65 @@
+/* Dashboard Container */
+.dashboard-container {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    padding: 20px; /* Reduced padding */
+}
+
+/* Title */
+.dashboard-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffcc00;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px; /* Reduced space below title */
+}
+
+/* Subjects Section */
+.subjects-heading {
+    font-size: 22px;
+    color: #ffffff;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    padding: 8px; /* Slightly reduced padding */
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 10px; /* Reduced margin to bring subjects closer */
+}
+
+/* Subjects Container */
+.subjects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px; /* Reduced gap between subject cards */
+    justify-content: center;
+    margin-top: 5px; /* Reduced margin-top to bring it closer to heading */
+}
+
+/* Subject Cards */
+.subject-card {
+    background: linear-gradient(135deg, #ffcc00, #ff5733);
+    padding: 15px; /* Reduced padding */
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.subject-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Subject Name */
+.subject-card a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* No Subjects Message */
+.no-subjects {
+    color: #bbb;
+    font-style: italic;
+}

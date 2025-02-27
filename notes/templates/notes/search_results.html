@@ -1,0 +1,8 @@
+{% extends 'notes/base.html' %}
+{% block content %}
+    <h2>Search Results</h2>
+    <p>Query: {{ query }}</p>
+    {% for note in notes %}
+        <p><a href="{% url 'note_detail' note.id %}">{{ note.title }}</a></p>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'notes/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="home-container">
+    <div class="welcome-card">
+        <h1 class="welcome-text">📖 Welcome to <span class="highlight">Notes App</span></h1>
+        <p class="subtext">Your personal digital notebook for organizing notes, summaries, and diagrams effortlessly.</p>
+        
+        <div class="btn-container">
+            <a href="{% url 'login' %}" class="btn btn-login">🔑 Login</a>
+            <a href="{% url 'register' %}" class="btn btn-register">📝 Register</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

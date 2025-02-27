@@ -1,0 +1,14 @@
+{% extends 'notes/base.html' %}
+
+{% block title %}{{ object|yesno:"Edit Topic,Create Topic" }} - Notes App{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h2 class="form-title">{{ object|yesno:"✏️ Edit Topic,🆕 Create Topic" }}</h2>
+    <form method="post" class="styled-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save-btn">💾 Save</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'notes/base.html' %}
+{% load static %}
+
+{% block title %}Chat with {{ other_user.username }}{% endblock %}
+
+{% block content %}
+<div class="chat-container">
+    <div class="chat-header">
+        <div class="user-info">
+            <div class="user-avatar">
+                <i class="fas fa-user-circle"></i>
+            </div>
+            <h3 class="chat-username">{{ other_user.username }}</h3>
+        </div>
+    </div>
+
+    <div class="chat-box">
+        {% for message in conversation %}
+            <div class="chat-message {% if message.sender == request.user %}sent{% else %}received{% endif %}">
+                <div class="message-content">
+                    <p>{{ message.content }}</p>
+                </div>
+                <span class="timestamp">{{ message.timestamp|time:"H:i" }}</span>
+            </div>
+        {% endfor %}
+    </div>
+
+    <form method="POST" class="chat-input-form">
+        {% csrf_token %}
+        <div class="chat-input">
+            <input type="text" name="content" placeholder="Type a message..." required>
+            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </form>
+</div>
+
+<script src="{% static 'js/chat.js' %}"></script>
+{% endblock %}

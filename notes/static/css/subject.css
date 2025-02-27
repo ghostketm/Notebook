@@ -1,0 +1,273 @@
+/* 📚 Main Container */
+.subjects-container {
+    text-align: center;
+    padding: 20px;
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh;
+}
+
+/* 🎀 Title Box at the Top */
+.title-box {
+    background: linear-gradient(135deg, #6a0dad, #8e44ad);
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* 📌 Subjects - Centered in the Middle */
+.subjects-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    flex-grow: 1; /* Pushes "Add Subject" down */
+}
+
+/* 🎴 Subject Cards */
+.subject-card {
+    background: linear-gradient(135deg, #ffcc00, #ff9900);
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+    position: relative;
+}
+
+.subject-card:hover {
+    transform: scale(1.03);
+}
+
+/* 📌 Subject Name (UPPERCASE & Bigger) */
+.subject-name {
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+}
+
+/* 📖 Subject Description */
+.subject-description {
+    color: white;
+    font-size: 14px;
+}
+
+/* 📝 Edit & 🗑️ Delete Buttons */
+.subject-actions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.edit-btn, .delete-btn {
+    padding: 6px 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s ease-in-out;
+}
+
+.edit-btn {
+    background: #6a0dad;
+    color: white;
+}
+
+.delete-btn {
+    background: #d32f2f;
+    color: white;
+}
+
+.edit-btn:hover, .delete-btn:hover {
+    transform: scale(1.05);
+}
+
+/* 🔽 Add Subject Button - Close to Footer */
+.add-subject-container {
+    text-align: center;
+    margin-top: auto; /* Pushes button closer to footer */
+    padding-bottom: 20px;
+}
+
+/* ➕ Add Subject Button */
+.add-subject-btn {
+    display: inline-block;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #6a0dad, #8e44ad);
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out;
+}
+
+.add-subject-btn:hover {
+    transform: scale(1.05);
+}
+
+/*subject form css*/
+/* 📜 Centered Form Container */
+.form-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #6a0dad, #8e44ad);
+    color: white;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 🎀 Title Box */
+.form-title-box {
+    background: linear-gradient(135deg, #ffcc00, #ff9900);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* 📌 Form Styling */
+.styled-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+/* 🏷️ Label Styling */
+.styled-form label {
+    font-weight: bold;
+}
+
+/* ✍️ Input Fields */
+.styled-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* 💾 Save Button */
+.save-btn {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(135deg, #ffcc00, #ff9900);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.save-btn:hover {
+    transform: scale(1.05);
+}
+
+/*subject delete css*/
+/* 🗑️ Delete Confirmation Container */
+.delete-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #6a0dad, #8e44ad);
+    color: white;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 🚨 Warning Box */
+.delete-title-box {
+    background: linear-gradient(135deg, #ff3b3b, #ff0000);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* 🔥 Warning Text */
+.delete-warning {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+/* ✅ Delete Button */
+.delete-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #ff3b3b, #ff0000);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.delete-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #d32f2f, #b71c1c);
+}
+
+/* ❌ Cancel Button */
+.cancel-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background: linear-gradient(135deg, #ffcc00, #ff9900);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.cancel-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+}
+
+/* 🗑️ Delete Button (Same Size as Edit Button) */
+.delete-btn {
+    display: inline-block;  /* Make it behave like a link */
+    padding: 12px 20px;  /* Same padding as edit button */
+    background: #ff4500;  /* Reddish Orange */
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;  /* Center text */
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: none;  /* Remove default button border */
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.delete-btn:hover {
+    background: #cc3700;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(255, 69, 0, 0.3);
+}

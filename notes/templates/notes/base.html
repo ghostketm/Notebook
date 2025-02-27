@@ -1,0 +1,84 @@
+{% load static %}
+{% load django_bootstrap5 %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Notes App{% endblock %}</title>
+    
+    {% bootstrap_css %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+    <link rel="stylesheet" href="{% static 'css/chat.css' %}">  
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">  
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+    <link rel="stylesheet" href="{% static 'css/subject.css' %}">
+    <link rel="stylesheet" href="{% static 'css/topics.css' %}">
+    <link rel="stylesheet" href="{% static 'css/notes.css' %}">
+    <link rel="stylesheet" href="{% static 'css/inbox.css' %}">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg" style="background: linear-gradient(to right, #6a0dad, #ffcc00);">
+            <div class="container">
+                <a class="navbar-brand text-light fw-bold" href="{% url 'home' %}">
+                    <i class="fas fa-book"></i> Notes App
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        {% if user.is_authenticated %}
+                            <li class="nav-item"><a class="nav-link text-light" href="{% url 'dashboard' %}"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                            <li class="nav-item"><a class="nav-link text-light" href="{% url 'profile' %}"><i class="fas fa-user"></i> Profile</a></li>
+                            <li class="nav-item"><a class="nav-link text-light" href="{% url 'subject_list' %}"><i class="fas fa-book"></i> Subjects</a></li>
+                            <li class="nav-item"><a class="nav-link text-light" href="{% url 'inbox' %}"><i class="fas fa-envelope"></i> Inbox</a></li>
+                        {% endif %}
+                    </ul>
+
+                    <ul class="navbar-nav ms-auto">
+                        {% if user.is_authenticated %}
+                            <li class="nav-item">
+                                <a class="nav-link text-light fw-bold" href="{% url 'profile' %}">
+                                    <i class="fas fa-user-circle"></i> {{ user.username }}
+                                </a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link text-danger fw-bold" href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                        {% else %}
+                            <li class="nav-item"><a class="nav-link text-light" href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                            <li class="nav-item"><a class="nav-link text-light" href="{% url 'register' %}"><i class="fas fa-user-plus"></i> Register</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="container my-4 main-content">
+            {% block content %}{% endblock %}
+        </div>
+
+        <!-- Footer -->
+        <footer class="text-white text-center py-3" style="background: linear-gradient(to right, #6a0dad, #ffcc00);">
+            <p>&copy; 2025 Notes App. All Rights Reserved.</p>
+            <div>
+                <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </footer>
+    </div>
+
+    {% bootstrap_javascript %}
+    <script src="{% static 'js/script.js' %}"></script>
+    <script src="{% static 'js/password-toggle.js' %}"></script>
+</body>
+</html>

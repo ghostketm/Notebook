@@ -1,0 +1,25 @@
+{% extends 'notes/base.html' %}
+{% load static %}
+
+{% block title %}Dashboard - Notes App{% endblock %}
+
+{% block content %}
+<div class="dashboard-container">
+    <h2 class="dashboard-title">📚 Welcome to Your Dashboard</h2>
+
+    <h3 class="subjects-heading">Your Subjects</h3>
+    <div class="subjects-container">
+        {% for subject in subjects %}
+            <div class="subject-card">
+                <a href="{% url 'topic_list' subject.id %}">
+                    <div class="subject-name">{{ subject.name }}</div>
+                </a>
+            </div>
+        {% empty %}
+            <p class="no-subjects">You have no subjects yet.</p>
+        {% endfor %}
+    </div>
+</div>
+
+<script src="{% static 'js/dashboard.js' %}"></script>
+{% endblock %}

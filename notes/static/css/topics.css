@@ -1,0 +1,386 @@
+/* 🟣 Topics Container */
+.topics-container {
+    text-align: center;
+    padding: 20px;
+}
+
+/* 📚 Title Box */
+.title-box {
+    background: linear-gradient(135deg, #6a0dad, #8e44ad);
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 20px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* 🎴 Topic Cards */
+.topics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    justify-content: center;
+}
+
+.topic-card {
+    background: linear-gradient(135deg, #ffcc00, #ff9900); /* Yellow-Orange */
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+.topic-card:hover {
+    transform: scale(1.05);
+}
+
+/* 📌 Topic Name */
+.topic-name {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: white;
+}
+
+/* 📄 Topic Description */
+.topic-description {
+    color: #fff;
+    font-size: 14px;
+}
+
+/* 🔘 Action Buttons */
+.action-buttons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.view-btn,
+.edit-btn,
+.delete-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* 🎨 Button Colors */
+.view-btn {
+    background: #3498db; /* Blue */
+    color: white;
+}
+
+.edit-btn {
+    background: #2ecc71; /* Green */
+    color: white;
+}
+
+.delete-btn {
+    background: #e74c3c; /* Red */
+    color: white;
+}
+
+/* 🖱️ Button Hover Effects */
+.view-btn:hover {
+    background: #217dbb;
+}
+
+.edit-btn:hover {
+    background: #27ae60;
+}
+
+.delete-btn:hover {
+    background: #c0392b;
+}
+
+/* ➕ Add Topic Button */
+.add-topic-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #6a0dad, #8e44ad);
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out;
+}
+
+.add-topic-btn:hover {
+    transform: scale(1.05);
+}
+/* 🟣 Topics Container */
+.topics-container {
+    text-align: center;
+    padding: 20px;
+}
+
+/* 📚 Title Box */
+.title-box {
+    background: linear-gradient(135deg, #6a0dad, #8e44ad);
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 20px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* 🎴 Topic Cards */
+.topics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    justify-content: center;
+}
+
+.topic-card {
+    background: linear-gradient(135deg, #ffcc00, #ff9900); /* Yellow-Orange */
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+.topic-card:hover {
+    transform: scale(1.05);
+}
+
+/* 📌 Topic Name */
+.topic-name {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: white;
+}
+
+/* 📄 Topic Description */
+.topic-description {
+    color: #fff;
+    font-size: 14px;
+}
+
+/* 🔘 Action Buttons */
+.action-buttons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.view-btn,
+.edit-btn,
+.delete-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* 🎨 Button Colors */
+.view-btn {
+    background: #3498db; /* Blue */
+    color: white;
+}
+
+.edit-btn {
+    background: #2ecc71; /* Green */
+    color: white;
+}
+
+.delete-btn {
+    background: #e74c3c; /* Red */
+    color: white;
+}
+
+/* 🖱️ Button Hover Effects */
+.view-btn:hover {
+    background: #217dbb;
+}
+
+.edit-btn:hover {
+    background: #27ae60;
+}
+
+.delete-btn:hover {
+    background: #c0392b;
+}
+
+/* ➕ Add Topic Button */
+.add-topic-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #6a0dad, #8e44ad);
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out;
+}
+
+.add-topic-btn:hover {
+    transform: scale(1.05);
+}
+
+
+/* 📚 Topic Form styles*/
+/* 🟣 Form Container (Purple-Themed) */
+.form-container {
+    max-width: 450px;
+    background: linear-gradient(135deg, #6a0dad, #8e44ad); /* Purple Gradient */
+    padding: 25px;
+    margin: 40px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: white;
+}
+
+/* ✏️ Form Title */
+.form-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* 📝 Styled Form */
+.styled-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* 📌 Input Fields */
+.styled-form input[type="text"],
+.styled-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔘 Save Button */
+.save-btn {
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #ffcc00, #ff9900); /* Yellow-Orange */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.save-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 🖼️ Adjust Form Elements */
+.styled-form label {
+    font-weight: bold;
+}
+
+.styled-form input,
+.styled-form textarea {
+    background: white;
+}
+
+/* 📚 Topic delete styles*/
+/* 🚮 Delete Container */
+.delete-container {
+    max-width: 400px;
+    background: white;
+    padding: 20px;
+    margin: 50px auto;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ⚠️ Delete Title */
+.delete-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+/* 📄 Delete Text */
+.delete-text {
+    font-size: 16px;
+    margin: 15px 0;
+}
+
+/* 🔘 Delete Buttons */
+.confirm-delete-btn,
+.cancel-btn {
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    margin: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* 🔴 Confirm Delete */
+.confirm-delete-btn {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.confirm-delete-btn:hover {
+    background: #c0392b;
+    transform: scale(1.05);
+}
+
+/* ❌ Cancel Button */
+.cancel-btn {
+    background: #6c757d;
+    color: white;
+}
+
+.cancel-btn:hover {
+    background: #5a6268;
+    transform: scale(1.05);
+}
+
+/* 🗑️ Delete Button (Same Size as Edit Button) */
+.delete-btn {
+    display: inline-block;  /* Make it behave like a link */
+    padding: 12px 20px;  /* Same padding as edit button */
+    background: #ff4500;  /* Reddish Orange */
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;  /* Center text */
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: none;  /* Remove default button border */
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.delete-btn:hover {
+    background: #cc3700;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(255, 69, 0, 0.3);
+}

@@ -1,0 +1,95 @@
+/* Home Page Styling */
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Welcome Card */
+.welcome-card {
+    background: linear-gradient(135deg, #6a0dad, #ffcc00);
+    color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.welcome-card:hover {
+    transform: scale(1.02);
+}
+
+/* Title Styling */
+.welcome-text {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.highlight {
+    color: #ffe066;
+    font-style: italic;
+}
+
+/* Subtext */
+.subtext {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+/* Button Container */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Login & Register Buttons */
+.btn-login, .btn-register {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Login Button */
+.btn-login {
+    background: #6a0dad;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(106, 13, 173, 0.5);
+}
+
+.btn-login:hover {
+    background: #520a8f;
+    transform: translateY(-3px);
+}
+
+/* Register Button */
+.btn-register {
+    background: #ffcc00;
+    color: #6a0dad;
+    box-shadow: 0px 4px 10px rgba(255, 204, 0, 0.5);
+}
+
+.btn-register:hover {
+    background: #e6b800;
+    transform: translateY(-3px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

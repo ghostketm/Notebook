@@ -1,0 +1,32 @@
+{% extends 'notes/base.html' %}
+{% load static %}
+
+{% block title %}Topics - Notes App{% endblock %}
+
+{% block content %}
+<div class="topics-container">
+    <div class="title-box">
+        <h2 class="topics-title">📚 Topics</h2>
+    </div>
+
+    <div class="topics-grid">
+        {% for topic in topics %}
+            <div class="topic-card">
+                <div class="topic-content">
+                    <h3 class="topic-name">{{ topic.name }}</h3>
+                    <p class="topic-description">Click to explore notes inside this topic!</p>
+                </div>
+                <div class="action-buttons">
+                    <a href="{% url 'note_list' topic.id %}" class="view-btn">📖 View</a>
+                    <a href="{% url 'topic_update' topic.id %}" class="edit-btn">✏️ Edit</a>
+                    <a href="{% url 'topic_delete' topic.id %}" class="delete-btn" onclick="return confirm('Are you sure you want to delete this topic?');">🗑️ Delete</a>
+                </div>
+            </div>
+        {% empty %}
+            <p class="no-topics">No topics yet. Start by adding one! 📖</p>
+        {% endfor %}
+    </div>
+
+    <a href="{% url 'topic_create' subject.id %}" class="add-topic-btn">➕ Add Topic</a>
+</div>
+{% endblock %}

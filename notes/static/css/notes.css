@@ -1,0 +1,263 @@
+/* 📜 Notes Container */
+.notes-container {
+    max-width: 900px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 20px;
+}
+
+/* 📝 Title Box */
+.title-box {
+    background: linear-gradient(135deg, #6a0dad, #8e44ad);
+    color: white;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* 📌 Notes Grid */
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* 🏷️ Note Cards */
+.note-card {
+    background: linear-gradient(135deg, #ffcc00, #ff9900);
+    color: white;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+.note-card:hover {
+    transform: scale(1.05);
+}
+
+/* ✏️ Note Content */
+.note-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.note-description {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* 🚀 No Notes Message */
+.no-notes {
+    font-size: 16px;
+    font-weight: bold;
+    color: #6a0dad;
+    margin-top: 15px;
+}
+
+/* ➕ Add Note Button */
+.add-note-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #6a0dad, #8e44ad);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.add-note-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #4b0082, #7b1fa2);
+}
+
+/* 📝 Note detail */
+/* 📝 Note Container */
+.note-container {
+    max-width: 700px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+/* 📌 Title Box (Purple Background) */
+.note-title-box {
+    background: linear-gradient(135deg, #6a0dad, #8e44ad); /* Purple gradient */
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 📝 Content Card (Yellow-Orange Gradient) */
+.note-card {
+    background: linear-gradient(135deg, #ffcc00, #ff9900); /* Yellow-Orange */
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(255, 153, 0, 0.3);
+    text-align: left;
+}
+
+/* 📖 Note Content */
+.note-content {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* 🎯 Action Buttons */
+.note-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* ✏️ Edit Button */
+.edit-btn {
+    padding: 12px 20px;
+    background: #6a0dad;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.edit-btn:hover {
+    background: #8e44ad;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(106, 13, 173, 0.3);
+}
+
+/* 🗑️ Delete Button */
+.delete-btn {
+    padding: 12px 20px;
+    background: #ff4500; /* Reddish Orange */
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.delete-btn:hover {
+    background: #cc3700;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(255, 69, 0, 0.3);
+}
+
+/* 🌟 Responsive Design */
+@media (max-width: 768px) {
+    .note-container {
+        width: 90%;
+    }
+    .note-actions {
+        flex-direction: column;
+    }
+}
+
+/* 🗑️ Delete Button (Same Size as Edit Button) */
+.delete-btn {
+    display: inline-block;  /* Make it behave like a link */
+    padding: 12px 20px;  /* Same padding as edit button */
+    background: #ff4500;  /* Reddish Orange */
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;  /* Center text */
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: none;  /* Remove default button border */
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.delete-btn:hover {
+    background: #cc3700;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(255, 69, 0, 0.3);
+}
+
+
+/*notes delete */
+/* 🗑️ Delete Page Container */
+.delete-container {
+    max-width: 500px;
+    margin: 80px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    text-align: center;
+}
+
+/* 🟣 Title Styling */
+.delete-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: purple;
+    margin-bottom: 15px;
+}
+
+/* ⚠️ Warning Text */
+.delete-warning {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* 🚀 Button Container */
+.delete-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+/* 🟥 Delete Button */
+.delete-btn {
+    padding: 12px 20px;
+    background: #ff4500;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.delete-btn:hover {
+    background: #cc3700;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(255, 69, 0, 0.3);
+}
+
+/* ❌ Cancel Button */
+.cancel-btn {
+    padding: 12px 20px;
+    background: orange;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.cancel-btn:hover {
+    background: #e69500;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(255, 165, 0, 0.3);
+}

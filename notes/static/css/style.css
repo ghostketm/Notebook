@@ -1,0 +1,90 @@
+/* Ensure full height layout */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content expands to push footer down */
+.wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content area with a themed background */
+.main-content {
+    flex: 1;
+    background: linear-gradient(to right, #f8e6ff, #fff6cc);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer stays at the bottom */
+footer {
+    background: linear-gradient(to right, #ffcc00, #6a0dad);
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    font-weight: bold;
+}
+
+/* Navbar styling */
+.navbar-brand {
+    font-weight: bold;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Positioning for password toggle icon */
+.password-field {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 70%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: #ffcc00;
+    transition: color 0.3s ease-in-out;
+}
+
+.toggle-password:hover {
+    color: white;
+}
+
+/*delete button*/
+/* 🗑️ Delete Button (Same Size as Edit Button) */
+.delete-btn {
+    display: inline-block;  /* Make it behave like a link */
+    padding: 12px 20px;  /* Same padding as edit button */
+    background: #ff4500;  /* Reddish Orange */
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;  /* Center text */
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: none;  /* Remove default button border */
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.delete-btn:hover {
+    background: #cc3700;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(255, 69, 0, 0.3);
+}

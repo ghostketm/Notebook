@@ -1,0 +1,22 @@
+{% extends 'notes/base.html' %}
+{% block title %}{{ object.title }} - Notes App{% endblock %}
+
+{% block content %}
+<div class="note-container">
+    <!-- 📌 Title Box (Purple) -->
+    <div class="note-title-box">
+        <h2 class="note-title">{{ object.title }}</h2>
+    </div>
+
+    <!-- 📝 Content Card (Yellow-Orange Gradient) -->
+    <div class="note-card">
+        <p class="note-content">{{ object.content }}</p>
+    </div>
+
+    <!-- ✏️ Action Buttons -->
+    <div class="note-actions">
+        <a href="{% url 'note_update' object.id %}" class="edit-btn">✏️ Edit</a>
+        <a href="{% url 'note_delete' object.id %}" class="delete-btn">🗑️ Delete</a>
+    </div>
+</div>
+{% endblock %}

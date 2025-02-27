@@ -1,0 +1,38 @@
+{% extends 'notes/base.html' %}
+{% load static %}
+
+{% block title %}Subjects - Notes App{% endblock %}
+
+{% block content %}
+<div class="subjects-container">
+    <!-- 📌 Title at the Top -->
+    <div class="title-box">
+        <h2 class="subjects-title">📘 Subjects</h2>
+    </div>
+
+    <!-- 📚 Subjects in the Middle -->
+    <div class="subjects-list">
+        {% for subject in subjects %}
+            <div class="subject-card">
+                <a href="{% url 'topic_list' subject.id %}">
+                    <h3 class="subject-name">{{ subject.name }}</h3>
+                    <p class="subject-description">Explore topics under this subject</p>
+                </a>
+
+                <!-- 📝 Edit & 🗑️ Delete Buttons -->
+                <div class="subject-actions">
+                    <a href="{% url 'subject_update' subject.id %}" class="edit-btn">✏️ Edit</a>
+                    <a href="{% url 'subject_delete' subject.id %}" class="delete-btn">🗑️ Delete</a>
+                </div>
+            </div>
+        {% empty %}
+            <p class="no-subjects">No subjects yet. Add one below! 📖</p>
+        {% endfor %}
+    </div>
+
+    <!-- 🔽 Add Subject Button Close to Footer -->
+    <div class="add-subject-container">
+        <a href="{% url 'subject_create' %}" class="add-subject-btn">➕ Add Subject</a>
+    </div>
+</div>
+{% endblock %}

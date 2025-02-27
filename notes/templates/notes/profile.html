@@ -1,0 +1,33 @@
+{% extends 'notes/base.html' %}
+{% load static %}
+
+{% block title %}Profile - Notes App{% endblock %}
+
+{% block content %}
+<div class="profile-container">
+    <h2 class="profile-title">👤 Your Profile</h2>
+
+    <div class="profile-card">
+        <div class="avatar-section">
+            <label for="imageUpload">
+                <img id="profilePreview" 
+                     src="{% if user.profile.image %}{{ user.profile.image.url }}{% else %}{% static 'img/bitmoji.png' %}{% endif %}" 
+                     alt="Profile Picture">
+                <span class="upload-icon"><i class="fas fa-camera"></i></span>
+            </label>
+            <input type="file" name="image" id="imageUpload" accept="image/*">
+        </div>
+
+        <form method="post" enctype="multipart/form-data" class="profile-form">
+            {% csrf_token %}
+            <div class="profile-fields">
+                {{ profile_form.as_p }}
+            </div>
+
+            <button type="submit" class="update-btn">Update Profile</button>
+        </form>
+    </div>
+</div>
+
+<script src="{% static 'js/profile.js' %}"></script>
+{% endblock %}
